@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Qual País</title>
+</head>
+<body>
+    <h1>Qual Pais:?</h1>
+    Pais: <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Localizar" onclick="localizar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function localizar(){
+            var txtpais = document.querySelector('input#txtp')
+            var res = document.querySelector('div#res')
+            var pais = (txtpais.value)
+            res.innerHTML = `<p>Hoje em dia voce esta vivendo no <strong>${pais}</strong>.</p>`
+            if (pais == 'Brasil') {
+                res.innerHTML += `<p>Voce e Brasileiro</p>`
+            } else {
+                res.innerHTML = `<p>Voce e Estrangeiro</p>`
+                res.innerHTML += `<p>E Esta vivendo no <strong>${pais}</strong></p> `
+            }
+        }
+    </script>
+    
+</body>
+</html>
